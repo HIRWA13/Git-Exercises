@@ -2,7 +2,7 @@
 
 ## Bundle 3
 
-### Exercise 3
+### Exercise 2
 
 ```bash
 
