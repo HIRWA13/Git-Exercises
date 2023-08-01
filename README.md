@@ -2,8 +2,9 @@
 
 # table of contents
 
-1.[Bundle 3](#bundle-3)
-2.[Bundle 4](#bundle-4)
+
+-[Bundle 3](#bundle-3)
+-[Bundle 4](#bundle-4)
 
 ## Bundle 3
 
