@@ -1,5 +1,10 @@
 # Git Exercises Solutions
 
+# table of contents
+
+1.[Bundle 3](#bundle-3)
+2.[Bundle 4](#bundle-4)
+
 ## Bundle 3
 
 ### Exercise 2
@@ -161,4 +166,69 @@ User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/home-page-redesign)
 $
 
 
+```
+
+
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$ git remote add git-copy https://github.com/HIRWA13/Git-check.git
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$ git add home.html
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$ git commit -m "updated the contents of the home.html and added the nav container"
+[main 0a32b8f] updated the contents of the home.html and added the nav container
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$ git push --set-upstream git-copy main
+Enumerating objects: 48, done.
+Counting objects: 100% (48/48), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (47/47), done.
+Writing objects: 100% (48/48), 8.31 KiB | 2.77 MiB/s, done.
+Total 48 (delta 21), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (21/21), done.
+To https://github.com/HIRWA13/Git-check.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'git-copy/main'.
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 405 bytes | 405.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/HIRWA13/Git-Exercises.git
+   f2cc936..0a32b8f  main -> main
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$
 ```
