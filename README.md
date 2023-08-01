@@ -1,10 +1,12 @@
 # Git Exercises Solutions
 
-# table of contents
+## table of contents
 
 
--[Bundle 3](#bundle-3)
--[Bundle 4](#bundle-4)
+- [Bundle 3](#bundle-3)
+- [Bundle 4](#bundle-4)
+
+
 
 ## Bundle 3
 
