@@ -1,196 +1,39 @@
-# Git Exercises Solutions
+# Git Exercises:
 
-## table of contents
-
-
-- [Bundle 3](#bundle-3)
-- [Bundle 4](#bundle-4)
-
-
-
-## Bundle 3
-
-### Exercise 2
+## Bundle 4 Exercise 2:
 
 ```bash
 
 User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git checkout ft/faq-page
-Switched to branch 'ft/faq-page'
-Your branch is up to date with 'origin/ft/faq-page'.
+$ git checkout ft/footer
+Switched to branch 'ft/footer'
+Your branch is up to date with 'origin/ft/footer'.
 
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/faq-page)
-$ git branch -b ft/home-page-redesign
-error: unknown switch `b'
-usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
-   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
-   or: git branch [<options>] [-l] [<pattern>...]
-   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
-   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
-   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
-   or: git branch [<options>] [-r | -a] [--points-at]
-   or: git branch [<options>] [-r | -a] [--format]
-
-Generic options
-    -v, --verbose         show hash and subject, give twice for upstream branch
-    -q, --quiet           suppress informational messages
-    -t, --track[=(direct|inherit)]
-                          set branch tracking configuration
-    -u, --set-upstream-to <upstream>
-                          change the upstream info
-    --unset-upstream      unset the upstream info
-    --color[=<when>]      use colored output
-    -r, --remotes         act on remote-tracking branches
-    --contains <commit>   print only branches that contain the commit
-    --no-contains <commit>
-                          print only branches that don't contain the commit
-    --abbrev[=<n>]        use <n> digits to display object names
-
-Specific git-branch actions:
-    -a, --all             list both remote-tracking and local branches
-    -d, --delete          delete fully merged branch
-    -D                    delete branch (even if not merged)
-    -m, --move            move/rename a branch and its reflog
-    -M                    move/rename a branch, even if target exists
-    --omit-empty          do not output a newline after empty formatted refs
-    -c, --copy            copy a branch and its reflog
-    -C                    copy a branch, even if target exists
-    -l, --list            list branch names
-    --show-current        show current branch name
-    --create-reflog       create the branch's reflog
-    --edit-description    edit the description for the branch
-    -f, --force           force creation, move/rename, deletion
-    --merged <commit>     print only branches that are merged
-    --no-merged <commit>  print only branches that are not merged
-    --column[=<style>]    list branches in columns
-    --sort <key>          field name to sort on
-    --points-at <object>  print only branches of the object
-    -i, --ignore-case     sorting and filtering are case insensitive
-    --recurse-submodules  recurse through submodules
-    --format <format>     format to use for the output
-
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/faq-page)
-$ git branch ft/home-page-redesign
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/faq-page)
-$ git switch ft/home-page-redesign
-Switched to branch 'ft/home-page-redesign'
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/home-page-redesign)
-$ git checkout main
-Switched to branch 'main'
-Your branch is up to date with 'origin/main'.
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/footer)
 $ git status
-On branch main
-Your branch is up to date with 'origin/main'.
+On branch ft/footer
+Your branch is up to date with 'origin/ft/footer'.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-        modified:   index.html
+        modified:   footer.html
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git add index.html
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/footer)
+$ git add footer.html
 
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git commit -m
-error: switch `m' requires a value
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/footer)
+$ git commit -m "updated the footer.html page"
+[ft/footer 931abc0] updated the footer.html page
+ 1 file changed, 5 insertions(+)
 
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git commit -m "updated the index.html page"
-[main b68d8ad] updated the index.html page
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git push origin main
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/HIRWA13/Git-Exercises.git
-   6050b44..b68d8ad  main -> main
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git switch ft/home-page-redesign
-Switched to branch 'ft/home-page-redesign'
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/home-page-redesign)
-$ git rebase main
-Successfully rebased and updated refs/heads/ft/home-page-redesign.
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/home-page-redesign)
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/footer)
 $ git status
-On branch ft/home-page-redesign
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   home.html
-
-no changes added to commit (use "git add" and/or "git commit -a")
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/home-page-redesign)
-$ git add home.html
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/home-page-redesign)
-$ git commit -m "added changes on the homepage"
-[ft/home-page-redesign 36f7dea] added changes on the homepage
- 1 file changed, 2 insertions(+), 5 deletions(-)
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/home-page-redesign)
-$ git push --set-upstream origin ft/home-page-redesign
-Enumerating objects: 10, done.
-Counting objects: 100% (10/10), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 936 bytes | 936.00 KiB/s, done.
-Total 8 (delta 4), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
-remote:
-remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting
-remote:      https://github.com/HIRWA13/Git-Exercises/pull/new/ft/home-page-redesign
-remote:
-To https://github.com/HIRWA13/Git-Exercises.git
- * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
-branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/home-page-redesign)
-$
-
-
-```
-
-
-
-## Bundle 4
-
-### Exercise 1
-
-```bash
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/home-page-redesign)
-$ git checkout main
-Switched to branch 'main'
-Your branch is up to date with 'origin/main'.
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git remote add git-copy https://github.com/HIRWA13/Git-check.git
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git status
-On branch main
-Your branch is up to date with 'origin/main'.
+On branch ft/footer
+Your branch is ahead of 'origin/ft/footer' by 1 commit.
+  (use "git push" to publish your local commits)
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -199,39 +42,213 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/footer)
 $ git add home.html
 
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git commit -m "updated the contents of the home.html and added the nav container"
-[main 0a32b8f] updated the contents of the home.html and added the nav container
- 1 file changed, 8 insertions(+), 4 deletions(-)
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/footer)
+$ git commit -m "updated the home.html"
+[ft/footer 7ed7d9e] updated the home.html
+ 1 file changed, 5 deletions(-)
 
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git push --set-upstream git-copy main
-Enumerating objects: 48, done.
-Counting objects: 100% (48/48), done.
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/footer)
+$ git push origin
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
 Delta compression using up to 12 threads
-Compressing objects: 100% (47/47), done.
-Writing objects: 100% (48/48), 8.31 KiB | 2.77 MiB/s, done.
-Total 48 (delta 21), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (21/21), done.
-To https://github.com/HIRWA13/Git-check.git
- * [new branch]      main -> main
-branch 'main' set up to track 'git-copy/main'.
-
-User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
-$ git push origin main
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 405 bytes | 405.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 669 bytes | 334.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
 To https://github.com/HIRWA13/Git-Exercises.git
-   f2cc936..0a32b8f  main -> main
+   84874f1..7ed7d9e  ft/footer -> ft/footer
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'git-copy/main' by 1 commit.
+  (use "git push" to publish your local commits)
 
 User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$  git log --online
+fatal: unrecognized argument: --online
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$ git log --oneline
+238a8a6 (HEAD -> main) updated the footer component
+6cb5b94 (origin/main, git-copy/main) updated the README file
+1250274 updated the README file on main
+7edd260 updated the README file
+0a32b8f updated the contents of the home.html and added the nav container
+f2cc936 updated the README.md
+7b4bd41 added a README file
+b68d8ad updated the index.html page
+6050b44 Merge branch 'main' of https://github.com/HIRWA13/Git-Exercises
+db6435d changed the index.html page
+466157f Merge pull request #4 from HIRWA13/ft/contact-page
+a04e25a (origin/ft/contact-page, ft/contact-page) added the contact us page
+f8d755b added the team page
+4997146 Merge pull request #3 from HIRWA13/ft/team-page
+ee801c8 (origin/ft/team-page, ft/team-page) added the team page
+eff90ca resolved the conflicts
+pick 6cb5b94 updated the README file
+
+
+Successfully rebased and updated refs/heads/main.
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$ git log --oneline
+c623a0d (HEAD -> main) fix changes
+238a8a6 updated the footer component
+6cb5b94 (origin/main, git-copy/main) updated the README file
+1250274 updated the README file on main
+7edd260 updated the README file
+0a32b8f updated the contents of the home.html and added the nav container
+f2cc936 updated the README.md
+#                    commit's log message, unless -C is used, in which case
+
+Successfully rebased and updated refs/heads/ft/squashing.
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'git-copy/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$ git merge ft/footer
+Auto-merging footer.html
+CONFLICT (add/add): Merge conflict in footer.html
+Auto-merging home.html
+CONFLICT (content): Merge conflict in home.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main|MERGING)
+$ git status
+On branch main
+Your branch is ahead of 'git-copy/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      footer.html
+        both modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main|MERGING)
+$ git add --all
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main|MERGING)
+$ git status
+On branch main
+Your branch is ahead of 'git-copy/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   footer.html
+        modified:   home.html
+
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main|MERGING)
+$ git commit -m "changed the footer component and the home page"
+[main 265f895] changed the footer component and the home page
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (main)
+$ git checkout ft/squashing
+Switched to branch 'ft/squashing'
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ git log --oneline
+c623a0d (HEAD -> ft/squashing) fix changes
+238a8a6 updated the footer component
+6cb5b94 (origin/main, git-copy/main) updated the README file
+1250274 updated the README file on main
+7edd260 updated the README file
+0a32b8f updated the contents of the home.html and added the nav container
+f2cc936 updated the README.md
+7b4bd41 added a README file
+b68d8ad updated the index.html page
+6050b44 Merge branch 'main' of https://github.com/HIRWA13/Git-Exercises
+db6435d changed the index.html page
+466157f Merge pull request #4 from HIRWA13/ft/contact-page
+a04e25a (origin/ft/contact-page, ft/contact-page) added the contact us page
+f8d755b added the team page
+4997146 Merge pull request #3 from HIRWA13/ft/team-page
+ee801c8 (origin/ft/team-page, ft/team-page) added the team page
+eff90ca resolved the conflicts
+88b2400 Merge branch 'main' of https://github.com/HIRWA13/Git-Exercises
+35dd828 changes to the services.html
+8bad055 (origin/ft/service-redesign, ft/service-redesign) modified the services.html page
+bd7250b Merge pull request #1 from HIRWA13/ft/bundle-2
+3f35f55 (origin/ft/bundle-2, ft/bundle-2) added the services.html page
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ git merge --squash ft/footer
+Auto-merging footer.html
+CONFLICT (add/add): Merge conflict in footer.html
+Auto-merging home.html
+CONFLICT (content): Merge conflict in home.html
+Squash commit -- not updating HEAD
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ git add --all
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ git commit -m "updated the footer and the homepage"
+[ft/squashing 7e87691] updated the footer and the homepage
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ git merge --squash ft/footer
+Auto-merging home.html
+Automatic merge went well; stopped before committing as requested
+Squash commit -- not updating HEAD
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ git merge --squash ft/footer
+Auto-merging home.html
+Automatic merge went well; stopped before committing as requested
+Squash commit -- not updating HEAD
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ git status
+On branch ft/squashing
+nothing to commit, working tree clean
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ git push -u origin ft/squashing
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.16 KiB | 1.16 MiB/s, done.
+Total 10 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/HIRWA13/Git-Exercises/pull/new/ft/squashing
+remote:
+To https://github.com/HIRWA13/Git-Exercises.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ touch README.md
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
+$ ls
+README.md   contact.html  home.html   services.html  team.html
+about.html  footer.html   index.html  style.css
+
+User@DESKTOP-72SEU4G MINGW64 ~/projects/GitExercises (ft/squashing)
 $
+
 ```
